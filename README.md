@@ -66,6 +66,12 @@ docker run -it --rm --network=postgres-kafka-demo_default \
          postgres:11.0 psql -h postgres -U postgres
 ```
 
+in Windows:
+```
+$env:PWD="/home/data/"
+docker run -it --rm --network=postgres-kafka-demo_default postgres:11.0 psql -h postgres -U postgres
+```
+
 Password = postgres
 
 At the command line:
