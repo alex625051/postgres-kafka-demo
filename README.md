@@ -100,6 +100,8 @@ PRIMARY KEY (student_id));
 
 \copy research FROM '/home/data/research_1.csv' DELIMITER ',' CSV HEADER
 ```
+или загружаем вручную через datagrip
+
 
 ## Connect Postgres database as a source to Kafka
 
@@ -110,6 +112,13 @@ sink all of the students database to Kafka.
 curl -X POST -H "Accept:application/json" -H "Content-Type: application/json" \
       --data @postgres-source.json http://localhost:8083/connectors
 ```
+Сначала загружаем конфиг и смотри что он на месте
+```
+curl -X POST -H "Accept:application/json" -H "Content-Type: application/json" --data @postgres-source.json http://localhost:8083/connectors
+
+curl -H "Accept:application/json" localhost:8083/connectors/
+```
+
 
 The connector 'postgres-source' should show up when curling for the list
 of existing connectors:
