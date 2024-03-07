@@ -44,6 +44,11 @@ docker build -t debezium-connect -f debezium.Dockerfile .
 ```
 
 ### Bring up the entire environment
+use 
+```
+$env:PWD = Get-Location
+```
+in Windows
 
 ```
 docker-compose up -d
